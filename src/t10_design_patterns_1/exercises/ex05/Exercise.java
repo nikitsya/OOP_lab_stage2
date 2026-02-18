@@ -1,6 +1,5 @@
 package t10_design_patterns_1.exercises.ex05;
 
-
 import java.util.ArrayDeque;
 
 class Counter {
