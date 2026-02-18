@@ -1,0 +1,25 @@
+package t09_generics_2.exercises.ex02;
+
+import java.util.List;
+
+class Entity { }
+
+class Lists {
+    public static void printAll(List<?> items) {
+        if (items == null)
+            return;
+
+        for (Object obj : items)
+            System.out.println(obj);
+    }
+}
+
+public class Exercise {
+    public static void run() {
+        Lists.printAll(java.util.List.of("A", "B"));
+        Lists.printAll(java.util.List.of(10, 20));
+
+        java.util.List<Entity> entities = java.util.List.of(new Entity(), new Entity());
+        Lists.printAll(entities);
+    }
+}
